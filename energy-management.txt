@@ -1,0 +1,36 @@
+Solar , load, Battery, grid, EVs
+
+But :
+---
+
+howa anou ndir agent yat7akm f loads za3ma 3andah 2 role principale li homa y cahrger la batterie wla y decahtgoha 
+w kayn des but secondaire kima y7afad 3la batterie yatla9a time li y charger la batteir bach prix mayjich ghali
+
+
+State :
+-----
+
+time, pv_ta3 solar, soc, capicty ta3 abttery, grid_cost, EV_soc
+
+
+Agent :
+-----
+
+li9 ya3raf PV ta3 solar bach y decider kifech yasta3mal hadi 6a9a
+li9 ya3raf winta ycharger w winta yfaragh hadik energy
+li9 ya3raf winta yachri ml grid bach ydir minmalize lel argentenergy-management
+li9 ya3raf winta yachg-rger car bach tjr min ta3 argent w max ta3 energy
+
+
+Reward :
+------
+
+ghadi nagsmah haq + w - :
++ yadi n9a6i min : ya3raf winta exact ycheger , y7afad 3la SOC ta3 EV w solar pannel 
+- : EV laychargiha fel wa9t li yabghi yadiha saii9, yfot capacity ta3 batterie, cost ta3 grid tji kbira bzaf
+
+
+constraints :
+-----------
+
+peak demande, base load, capacity ta3 battery, Efficiency ta3 battery, SOC limits, Maximum Grid Import 
