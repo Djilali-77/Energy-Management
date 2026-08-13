@@ -9,7 +9,7 @@ class Ev:
         self.arrival_hour = arrival_hour
         self.departure_hour = departure_hour
 
-    def charge(self, hour, surplus):
+    def charge(self, hour, available_energy):
 
         if self.arrival_hour <= hour < self.departure_hour:
 
@@ -20,12 +20,16 @@ class Ev:
                 remaining_capacity = target_energy - stored_energy
 
                 charge = min(
-                    surplus,
+                    available_energy,
                     self.max_charge_power,
                     remaining_capacity
                 )
 
-                self.soc = (stored_energy + charge) / self.battery_capacity * 100
+                self.soc = (
+                    (stored_energy + charge)
+                    / self.battery_capacity
+                    * 100
+                )
 
                 return charge
 
