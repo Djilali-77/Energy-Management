@@ -74,8 +74,8 @@ class EnergyEnvironment:
 
     def step(self, action):
 
-        action[0] = battery_power
-        action[1] = ev_charge_power
+        battery_action = action[0]
+        ev_action = action[1]
 
         grid_import = 0
         ev_charge_power = 0
